@@ -3,6 +3,8 @@
 A Project Zomboid Build 42.22 fix (ZombieBuddy Java mod): houses you cleared, boarded up or lived in
 no longer fill up with zombies again.
 
+**[Get it on the Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3840342966)** · or download the zip from [Releases](https://github.com/WilliamJohnDavisIII/pz-cleared-rooms/releases).
+
 ## The bug
 
 When a chunk loads, the game fills each building room with zombies unless the room is marked
@@ -23,6 +25,7 @@ Log lines start with `[ClearedRooms]`.
 
 ## Install
 
+Subscribe on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3840342966), or unzip the release into `Zomboid/mods/`.
 Needs [ZombieBuddy](https://steamcommunity.com/sharedfiles/filedetails/?id=3619862853).
 Enable *Cleared Rooms Stay Clear* after ZombieBuddy.
 
