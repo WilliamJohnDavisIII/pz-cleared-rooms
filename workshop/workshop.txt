@@ -1,0 +1,24 @@
+version=1
+title=Cleared Rooms Stay Clear
+description=[h2]Your cleared houses stay cleared[/h2]
+description=Fixes the Build 42.22 bug where houses you have cleared, boarded up or lived in suddenly fill with zombies again.
+description=
+description=[h3]What's going on[/h3]
+description=When you look into a room, the game marks it as explored but never marks it as "already spawned". The next time that area loads, the game can fill the room with a fresh batch of zombies, right inside your base.
+description=
+description=[h3]What this mod does[/h3]
+description=[list]
+description=[*]Any room a player has explored counts as already spawned, so it is never refilled.
+description=[*]Rooms nobody has explored still spawn zombies as normal.
+description=[*]Zombies can still wander in through open doors, broken windows or broken barricades. Migration, hordes and events are untouched.
+description=[*]Works on existing saves. Each room is fixed the next time its area loads.
+description=[/list]
+description=
+description=[h3]Requirements[/h3]
+description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3619862853]ZombieBuddy[/url]. Load this mod after it and approve ClearedRooms.jar when ZombieBuddy asks.
+description=
+description=When the fix blocks a refill, console.txt logs a line starting with [ClearedRooms] kept explored room.
+description=
+description=Source code and technical write-up: [url=https://github.com/WilliamJohnDavisIII/pz-cleared-rooms]github.com/WilliamJohnDavisIII/pz-cleared-rooms[/url]
+tags=Build 42;Gameplay;Misc
+visibility=public
