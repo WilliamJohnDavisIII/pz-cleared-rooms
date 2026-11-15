@@ -1,0 +1,9 @@
+name=Cleared Rooms Stay Clear
+id=ClearedRooms
+author=Liam Davis
+modversion=1.0.0
+versionMin=42.22.0
+description=Fixes the Build 42.22 bug where houses you have cleared, boarded up or lived in suddenly fill with zombies again. The game never marks the room you actually look into as "already spawned", so when its area reloads it can be filled again. This mod treats every room a player has explored as already spawned. Works on existing saves. Needs ZombieBuddy. Single player and multiplayer (server side).
+require=\ZombieBuddy
+javaJarFile=media/java/ClearedRooms.jar
+javaPkgName=clearedrooms
