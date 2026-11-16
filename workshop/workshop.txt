@@ -9,15 +9,17 @@ description=
 description=[h3]What this mod does[/h3]
 description=[list]
 description=[*]Any room a player has explored counts as already spawned, so it is never refilled.
+description=[*]New in 1.1: zombies no longer reappear inside explored rooms when you reload or come back to an area. While an area is unloaded, the game keeps simulating its zombies without knowing about your walls and barricades, and on reload it could put them back inside your base. Now only zombies that were really inside a room when the area was saved come back there.
 description=[*]Rooms nobody has explored still spawn zombies as normal.
 description=[*]Zombies can still wander in through open doors, broken windows or broken barricades. Migration, hordes and events are untouched.
 description=[*]Works on existing saves. Each room is fixed the next time its area loads.
+description=[*]On an existing save, the reload fix starts after the first save with 1.1 (until then, zombies load as before).
 description=[/list]
 description=
 description=[h3]Requirements[/h3]
 description=[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3619862853]ZombieBuddy[/url]. Load this mod after it and approve ClearedRooms.jar when ZombieBuddy asks.
 description=
-description=When the fix blocks a refill, console.txt logs a line starting with [ClearedRooms] kept explored room.
+description=When the fix blocks a refill or keeps a zombie out, console.txt logs a line starting with [ClearedRooms] kept.
 description=
 description=Source code and technical write-up: [url=https://github.com/WilliamJohnDavisIII/pz-cleared-rooms]github.com/WilliamJohnDavisIII/pz-cleared-rooms[/url]
 tags=Build 42;Gameplay;Misc

@@ -19,4 +19,13 @@ BAD=$(cd "$B/classes" && for c in $(find . -name '*.class'); do
 # The patched method must exist with this exact signature.
 javap -p -cp "$GAME/projectzomboid.jar" zombie.iso.IsoChunk | grep -q 'public boolean isSpawnedRoom(long);' \
   || { echo "error: IsoChunk.isSpawnedRoom(long) not found in this game version" >&2; exit 1; }
+# The other patched methods too.
+P=$(javap -p -cp "$GAME/projectzomboid.jar" zombie.popman.ZombiePopulationManager zombie.MapCollisionData)
+for sig in 'private void addZombieStanding(float, float, float, zombie.iso.IsoDirections, int, zombie.popman.ZombieStateFlags, int);' \
+           'private void addZombieMoving(float, float, float, zombie.iso.IsoDirections, int, zombie.popman.ZombieStateFlags, int, int, int);' \
+           'public void removeChunkFromWorld(zombie.iso.IsoChunk);' \
+           'public void virtualizeZombie(zombie.characters.IsoZombie);' \
+           'public void save();' 'public void stop();'; do
+  grep -qF "$sig" <<<"$P" || { echo "error: '$sig' not found in this game version" >&2; exit 1; }
+done
 echo "built $JAR ($(sha256sum "$JAR" | cut -c1-16))"
